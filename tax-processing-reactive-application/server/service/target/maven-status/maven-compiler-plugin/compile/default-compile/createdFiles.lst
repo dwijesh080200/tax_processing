@@ -1,0 +1,9 @@
+mu\elca\tax\processing\mapper\CityMapper.class
+mu\elca\tax\processing\mapper\CityMapperImpl$1.class
+mu\elca\tax\processing\mapper\CityMapperImpl.class
+mu\elca\tax\processing\service\CitizenService.class
+mu\elca\tax\processing\service\impl\CitizenServiceImpl.class
+mu\elca\tax\processing\dto\CityDto.class
+mu\elca\tax\processing\mapper\CitizenMapper.class
+mu\elca\tax\processing\mapper\CitizenMapperImpl.class
+mu\elca\tax\processing\dto\CitizenDto.class
