@@ -1,6 +1,4 @@
 mu\elca\tax\processing\entity\City.class
-mu\elca\tax\processing\entity\QCitizen.class
-mu\elca\tax\processing\entity\QAuditModel.class
 mu\elca\tax\processing\entity\AuditModel.class
 mu\elca\tax\processing\entity\Citizen.class
 mu\elca\tax\processing\repository\CitizenRepository.class

@@ -3,24 +3,22 @@ package mu.elca.tax.processing.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.data.relational.core.mapping.Column;
 
 @Getter
 @Setter
-@MappedSuperclass
-@EntityListeners(AuditingEntityListener.class)
 public class AuditModel implements Serializable {
 
     @CreatedDate
+    @Column("created_on")
     protected LocalDateTime createdOn;
 
     @LastModifiedDate
+    @Column("updated_on")
     protected LocalDateTime updatedOn;
 
 }

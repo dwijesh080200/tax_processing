@@ -2,37 +2,29 @@ package mu.elca.tax.processing.entity;
 
 import java.util.UUID;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.Data;
-import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
-@Entity
+
 @Data
-@Table(name = "citizen")
+@Table("Citizen")
 public class Citizen extends AuditModel {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(
-            name = "UUID",
-            type = org.hibernate.id.uuid.UuidGenerator.class
-    )
-    private UUID id;
+    private UUID id = UUID.randomUUID();
 
-    @Column(nullable = false)
+    @Column("FIRSTNAME")
     private String firstName;
 
-    @Column(nullable = false)
+    @Column("LASTNAME")
     private String lastName;
 
-    @Column(nullable = false)
+    @Column("CITY")
     private City city;
 
-    @Column(nullable = false)
+    @Column("NATIONALID")
     private String nationalId;
 
 }

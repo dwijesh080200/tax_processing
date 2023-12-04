@@ -11,6 +11,7 @@ public interface CitizenMapper {
     @Mapping(target = "city", source = "cityDto")
     @Mapping(target = "createdOn", ignore = true)
     @Mapping(target = "updatedOn", ignore = true)
+    @Mapping(target = "id", ignore = true)
     Citizen mapToEntity(CitizenDto citizenDto);
 
     @Mapping(target = "cityDto", source = "city")
