@@ -16,9 +16,4 @@ public class AuditModel implements Serializable {
     @CreatedDate
     @Column("created_on")
     protected LocalDateTime createdOn;
-
-    @LastModifiedDate
-    @Column("updated_on")
-    protected LocalDateTime updatedOn;
-
 }

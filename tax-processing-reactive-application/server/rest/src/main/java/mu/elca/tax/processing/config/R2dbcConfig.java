@@ -25,10 +25,10 @@ public class R2dbcConfig extends AbstractR2dbcConfiguration {
         return new PostgresqlConnectionFactory(
                 PostgresqlConnectionConfiguration.builder()
                         .host("localhost")
-                        .port(5432)
+                        .port(5440)
                         .username("postgres")
                         .password("postgres")
-                        .database("mydb")
+                        .database("reactive")
                         .build());
     }
 

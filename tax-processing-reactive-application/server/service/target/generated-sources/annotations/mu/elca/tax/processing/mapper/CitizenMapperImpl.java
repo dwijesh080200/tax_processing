@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-12-04T21:25:59+0400",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.8 (Amazon.com Inc.)"
+    date = "2023-12-06T08:43:39+0400",
+    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.9 (BellSoft)"
 )
 @Component
 public class CitizenMapperImpl implements CitizenMapper {
@@ -32,6 +32,8 @@ public class CitizenMapperImpl implements CitizenMapper {
         citizen.setLastName( citizenDto.lastName() );
         citizen.setNationalId( citizenDto.nationalId() );
 
+        citizen.setCreatedOn( returnCurrentLocalDateTime() );
+
         return citizen;
     }
 
@@ -42,16 +44,16 @@ public class CitizenMapperImpl implements CitizenMapper {
         }
 
         CityDto cityDto = null;
-        UUID id = null;
         String firstName = null;
         String lastName = null;
         String nationalId = null;
 
         cityDto = cityMapper.mapToDto( citizen.getCity() );
-        id = citizen.getId();
         firstName = citizen.getFirstName();
         lastName = citizen.getLastName();
         nationalId = citizen.getNationalId();
+
+        UUID id = null;
 
         CitizenDto citizenDto = new CitizenDto( id, firstName, lastName, cityDto, nationalId );
 
